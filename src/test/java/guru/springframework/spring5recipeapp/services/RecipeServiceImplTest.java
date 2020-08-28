@@ -3,7 +3,8 @@ package guru.springframework.spring5recipeapp.services;
 import guru.springframework.spring5recipeapp.domain.Recipe;
 import guru.springframework.spring5recipeapp.repositories.RecipeRepository;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+/*import org.junit.jupiter.api.Test;*/
+import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
@@ -13,9 +14,10 @@ import java.util.Set;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-class RecipeServiceImplTest {
+public class RecipeServiceImplTest {
    // @InjectMocks
     RecipeServiceImpl recipeService;
+
     @Mock
     RecipeRepository recipeRepository;
 
@@ -26,7 +28,7 @@ class RecipeServiceImplTest {
     }
 
     @Test
-    void getRecipes() {
+    public void getRecipes() {
         Recipe recipe = new Recipe();
         HashSet recipesData = new HashSet();
         recipesData.add(recipe);
