@@ -64,13 +64,13 @@ public class IngredientToIngredientCommandTest {
         ingredient.setRecipe(RECIPE);
         ingredient.setAmount(AMOUNT);
         ingredient.setDescription(DESCRIPTION);
+
         UnitOfMeasure uom = new UnitOfMeasure();
         uom.setId(UOM_ID);
-        ingredient.setUom(uom);
 
+        ingredient.setUom(uom);
         //when
         IngredientCommand ingredientCommand = converter.convert(ingredient);
-
         //then
         assertEquals(ID_VALUE, ingredientCommand.getId());
         assertNotNull(ingredientCommand.getUom());
